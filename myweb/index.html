@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback Form (MDS4143)</title>
+    
+    <link rel="stylesheet" href="css/styles.css"> 
+</head>
+<body>
+    
+    <main class="wrapper">
+        <div class="card">
+            <h2>💬 Customer Feedback Form</h2>
+
+            <form id="feedbackForm" novalidate>
+              
+              <label for="name">Full Name</label>
+              <input type="text" id="name" required placeholder="Enter your full name">
+              <p class="error" id="nameError">This field is required.</p>
+
+              <label for="email">Email Address</label>
+              <input type="email" id="email" required placeholder="example@mail.com">
+              <p class="error" id="emailError">Please enter a valid email address.</p>
+
+              <label for="ic">Malaysian IC Number</label>
+              <input type="text" id="ic" required placeholder="990312-14-1234">
+              <p class="error" id="icError">IC format must be: YYMMDD-XX-XXXX</p>
+
+              <label for="phone">Phone Number</label>
+              <input type="text" id="phone" required placeholder="012-3456789 / 03-12345678">
+              <p class="error" id="phoneError">Phone must be in correct Malaysian format.</p>
+
+              <label for="rating">Satisfaction Level</label>
+              <select id="rating" required>
+                <option value="">Select your rating</option>
+                <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+                <option value="4">⭐⭐⭐⭐ Good</option>
+                <option value="3">⭐⭐⭐ Average</option>
+                <option value="2">⭐⭐ Poor</option>
+                <option value="1">⭐ Very Bad</option>
+              </select>
+              <p class="error" id="ratingError">Please select a rating.</p>
+
+              <label for="msg">Your Feedback</label>
+              <textarea id="msg" required placeholder="Tell us what you think..."></textarea>
+              <p class="error" id="msgError">Please enter a message.</p>
+
+              <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </main>
+    
+    <script src="js/script.js"></script> 
+
+</body>
+</html>
